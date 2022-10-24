@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos avanzados del HTML</title>
+    <LInk>
+    <link rel="stylesheet" href="general.css">
+    <style>
+        div {
+            /* border: 1px solid black;*/
+            display: flex;
+            justify-content: center;
+            /*Ejemplo de como centrar un boton*/
+        }
+
+        div a {
+            text-decoration: none;
+
+            background-color: rgb(80, 80, 80);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+
+
+
+        }
+        div a:hover {
+            background-color: white;
+            color: rgb(80, 80, 80);
+        }
+
+        /*Ejemplo de como centrar un título*/
+        h1 {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elementos avanzados de HTML</h1>
+    <h2>Links o hipervínculos</h2>
+    <p>Los links se encuentran en todo tipo de páginas. Permiten
+        al usuario navegar por los documentos de la web.
+    </p>
+    <p>
+        Cuando clicas en un link te mueve a otro documento
+        o a una parte del mismo.
+    </p>
+    <p>
+        Cuando se pulsa el cursor sobre un lisk, éste se torna en uan mano.
+    </p>
+    <p>
+        Un link se deine mediante el elemento <code>&lt;a&gt;</code>
+    </p>
+    <p>
+        La sintaxis de un link, por norma general, es :
+        <code>&lt;a href="url"&gt;Text del link&lt;/a&gt;</code>
+    </p>
+    <p>
+        El atributo más importante de un link es el "herf" ya que es
+        éste el que indica el punto al que nos llevará el link.
+    </p>
+    <p>
+        Ejemplos:
+    </p>
+    <a href="https://www.google.es/" target="_blank">Link a google</a> <br>
+    <a href="CSS-basico.html">Link a la teoria de CSS</a>
+    <p>
+        Los links tienen 3 estados:
+    <ul>
+        <li>Son azules cuando no han sido visitados</li>
+        <li>Morados cuando ya han sido clicados.</li>
+        <li>Y rojos cuando están activos.</li>
+    </ul>
+    </p>
+    <p>Los links se pueden modificar mediante CSS para que tengan un aspecto
+        totalmente distinto.
+    </p>
+    <div>
+        <a href="#">Esto es un link</a>
+    </div>
+    <h3>Usar una imagen como link</h3>
+    <a target="_blank"S
+        href="https://www.muyinteresante.es/mascotas/fotos/consejos-para-socializar-a-un-gatito-cachorro">
+        <img width="60%"
+            src="https://estaticos.muyinteresante.es/uploads/images/gallery/59a669fc5bafe88febb3d6cc/gatito-cesped_0.jpg"
+            alt="">
+    </a>
+
+
+
+
+</body>
+
+</html>

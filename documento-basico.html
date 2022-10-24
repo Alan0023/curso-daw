@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página</title>
+    
+
+    <style>
+        
+        /*Esto es un comentario de CSS al escribir "code" estamos definiendo un estilo
+        para TODAS las etiquetas code*/
+        code{
+            background-color: hsl(55, 55, 55) ; color: rgb(110, 155, 240)
+            ;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Formateo del texto en HTML</h1>
+    <p>
+        ELementos destinados específicamente a formatear el texto:
+
+    </p>
+    <ul>
+        <li><code>b</code> - Texto en negrita.</li>
+        <li><code>strong</code> - Texto importante.</li>
+        <li><code>i</code> - Texto en cursiva</li>
+        <li><code>em</code> - Texto en enfásis</li>
+        <li><code>mark</code> - Texto marcado.</li>
+        <li><code>small</code> - Texto tachado</li>
+        <li><code>ins</code> - Texto insertado</li>
+        <li><code>sub</code> - Texto subscrito</li>
+        <li><code>sup</code> - Texto superescrito</li>
+
+
+
+
+
+    </ul>
+
+    <p>
+        Esto es un párrafo. El texto que querramos destacar visualmente <b> lo haremos con negrita</b>.
+        El texto importante con la etiqueta <strong>strong</strong>
+        <br>
+        Mientras que el <code>b</code> es meramente visual, <code>strong</code> influye en el posicionamiento de la
+        página.
+    </p>
+    <p>
+        <small>Texto pequeño</small><br>
+        <mark>Texto marcado</mark><br>
+        <del>Texto tachado</del><br>
+        <ins>Texto subrayado</ins><br>
+        <sub>Texto inferior
+            <sup>Texto suoerior</sup>
+        </sub>
+    </p>
+    <h2>Elementos de citación</h2>
+    <ul>
+        <li><code>blockquote</code> - Define una sección citada de otra fuente. </li>
+        <li><code>q</code> - Define una cita corta.</li>
+        <li><code>abbr</code> - Define una abraviatura o acrónimo.</li>
+        <li><code>address</code> - Define la información de contacto del autor del artículo.</li>
+        <li><code>cite</code> - Define el título de un trabajo creativo. Como un poema, libro o canción.</li>
+        <li><code>bdo</code> - Se usa para definir la dirección del texto.</li>
+    </ul>
+
+    <h3>blockquote</h3>
+    <p>
+        La OMS según Wikipedia:
+    </p>
+    <blockquote cite="https://es.wikipedia.org/wiki/Organizaci%C3%B3n_Mundial_de_la_Salud">
+        La Organización Mundial de la Salud (OMS) en español, es el organismo de la Organización de las Naciones Unidas
+        (ONU) especializado en gestiones políticas de prevención, promoción e intervención a nivel mundial en la salud,
+        definida en su Constitución como un estado de completo bienestar físico, mental y social, y no solamente como la
+        ausencia de afecciones o enfermedades. Inicialmente fue organizada por el Consejo Económico y Social de las
+        Naciones Unidas, que impulsó la redacción de los primeros estatutos de la OMS. La primera reunión de esta
+        organización tuvo lugar en Ginebra (Suiza) en 1948.
+    </blockquote>
+    <h3>q</h3>
+    <p>
+        La situación actual quedó fijada en mayo de 1987 al aprobar la 27.ª Asamblea Mundial de la Salud el artículo 84
+        de su Reglamento Interior con la siguiente redacció <q>Artículo 84: el árabe, el chino, el español, el francés,
+            el inglés y el ruso serán los idiomas oficiales de la Asamblea de la Salud. El español, el francés, el
+            inglés y
+            el ruso serán sus idiomas de trabajo</q> . Esta asamblea hizo del multilingüismo una política de esta
+        institución.8​
+        Desde la adopción de una resolución de 1998, todos los documentos y material institucional de los órganos
+        deliberantes se han puesto a disposición en línea en todos los idiomas oficiales
+    </p>
+
+    <h3>abbr</h3>
+    <p><code>abbr</code> Se usa para definir abreviaturas y acrónimos como HTML, CSS, Mr, Dr, etc.</p>
+    <p>
+        La Organización Mundial de la Salud <abbr title="Organización Mundial de la Salud">OMS</abbr> en español, es el
+        organismo de la <abbr title="Organización de las Naciones Unidas">ONU</abbr>
+        especializado en gestiones políticas de prevención, promoción e intervención a nivel mundial en la salud,
+        definida en su Constitución como un estado de completo bienestar físico, mental y social, y no solamente como la
+        ausencia de afecciones o enfermedades.
+    </p>
+    <h3>address</h3>
+    <p>
+        Es un bloque de texto, que los lnavegadores normalmente escriben en cursiva.
+        Aquí se define la info de contacto del autor o dueño de la página/artículo/documento.
+        Puede ser desde una diracción física hasta una dirección de correo electrónico, un teléfono, etc.
+
+    </p>
+    <address>
+        Escrito por Alan Orrego. <br>
+        Contacto: <br>
+        alanorrego060@gmail.com <br>
+        Bilbao, Pais Vasco.
+    </address>
+    <h3>cite</h3>
+    <img src="https://www.biografiasyvidas.com/biografia/d/fotos/dali_persistencia.jpg" alt="" width="250">
+    <p>
+        <cite>La persistencia de la memoria</cite> , Por Salvador Dalí. Pintado en 1931.
+    </p>
+    <h3>bdo</h3>
+    <p>
+        <code>bdo</code> Se usa cuando queremos cambiar la dirección de un texto.
+    </p>
+    <p>
+        <bdo dir="rtl">Este texto está esctito de derecha a izquierda</bdo>
+    </p>
+    <h2>Estilos</h2>
+    <p>
+        Los estilos definen el aspecto visual de los elementos HTML que acompañan.
+        LA sintaxis es la siguiente: <br>
+        <code>&lt;elemento style="propiedad: valor;"&gt;</code>
+    </p>
+    <p>
+        Ejemplo:
+    </p>
+    <p style="background-color:  darkslategray; color: khaki">
+        Este párrafo tiene propiedades de fondo y color asignadas.
+    </p>
+    <p>
+        El lenguaje en el que se dereminan los estilos es CSS.
+    </p>
+    <p >
+        Una manera más correcta de determinar los estilos es mediante la etiqueta <code>style</code> ubicada dentro de
+        la etiqueta <code>head</code>.
+    </p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla 2</title>
+    <style>
+        table{ 
+            /*Esto es para crear celdas/separaciones en una tabla*/
+            border: 2px solid black;
+            border-collapse: collapse;
+            /*Está línea hace qeu las celdas se junten, eliminando los espacios en blanco*/
+            text-align: center;
+            /*Esto es para definir el tamaño de la tabla*/
+            width: 300px;
+            padding: 5px;
+        }
+        th{
+            border: 2px solid black;
+            padding: 5px 10px;
+            background-color: lightgray;
+            width: 50%;
+        }
+        td{
+            border: 1.5px solid gray;
+        }
+        .neg{
+            background-color: rgb(179, 176, 176);
+            text-align: left;
+            padding: 5px;
+        }
+        .der{
+            text-align: right;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body><h1>Tabla de HTML</h1>
+    <table>
+        <tr>
+            <th class="neg">Person</th>
+            <th class="neg">Age</th>
+        </tr>
+        <tr>
+            <td class="neg"><b>Chris</b></td>
+            <td class="der">38</td>
+        </tr>
+        <tr>
+            <td class="neg"><b>Dennis</b></td>
+            <td class="der">45</td>
+        </tr>
+        <tr>
+            <td class="neg"><b>Sarah</b></td>
+            <td class="der">29</td>
+        </tr>
+        <tr>
+            <td class="neg"><b>Karen</b></td>
+            <td class="der">47</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <style>
+        .flex-conteiner {
+            border: none;
+            height: none;
+            display: flex;
+            width: 100%;
+
+        }
+        .img-big{
+            width: 50%;
+        }
+        .img-small{
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .img-big img{
+            width: 100%; 
+        }
+        .img-small img{
+            width: 100%;
+        }
+        div {
+            border: 1px solid black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center ; ">My Gallery</h1>
+    <section class="flex-conteiner">
+        <div class="img-big">
+            <img src="./Recursos/img0.jfif" alt="">
+        </div>
+        <div class="img-small">
+            <div class="left">
+                <img src="./Recursos/img1.jpeg" alt=""> 
+            <img src="./Recursos/img2.webp" alt=""> 
+            <img src="./Recursos/img3.webp" alt=""> 
+            </div>
+            <div class="right">
+            <img src="./Recursos/img4.webp" alt=""> 
+            <img src="./Recursos/img5.jpeg" alt=""> 
+            <img src="./Recursos/img6.webp" alt="">
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

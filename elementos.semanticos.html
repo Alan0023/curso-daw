@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos semanticos</title>
+    <style>
+        .conteiner{
+
+            border: 1px solid black;
+            text-align: center;
+         
+            
+        }
+        header{
+            text-align: center;
+            background-color: rgb(99, 189, 189);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        nav{
+            background: rgb(112, 99, 99);
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .flex-conteiner{
+            display: flex;
+            justify-content: center;
+
+        }
+        .left{
+            width: 60%;
+        }
+        .right{
+            width: 40%;
+            height: 100%;
+        }
+        
+        
+        footer{
+          text-align: center;
+        }
+        
+    </style>
+<body class="flex-conteiner">
+    <h1>Elementos semánticos de HTML</h1>
+    <div class="conteiner">
+        <header>
+            <h1>Título</h1>
+        </header>
+        <nav class="conteiner " >
+            <h1>Menú de navegación</h1>
+        </nav>
+        <div>
+        <div class="left">
+        <section class="conteiner">
+            <h1>Section</h1>
+            
+        </section>
+        <article class="conteiner">
+            <h1>Article</h1>
+          
+        </article>
+    </div>
+    <div class="right">
+        <aside class="conteiner">
+           
+        </aside>
+    </div>
+</div>
+        <footer>
+            <h1>Footer</h1>
+        </footer>
+
+    </div>
+</body>
+</html>

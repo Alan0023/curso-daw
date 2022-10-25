@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba de JavaScript</title>
+    <style>
+        /* En CSS las palabras de los estilos se separan con un guión*/
+        #myHeader{
+            background-color: blue;
+            color: black;
+            padding: 20px 40px;
+            text-align: right;
+            border-radius: 0%;
+            font-family: monospace;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Prueba de JavaScript</h1>
@@ -27,8 +39,53 @@
     </p>
     <h2>Mi primer JavaScript</h2>
     <p id="txt"></p>
+    <button onclick="changeTxt()">Click me!</button>
+    <p>
+        JavaScript también puede cambiar los estilos de los elementos
+    </p>
+    <h1 id="myHeader">Título personalizado</h1>
+    <button onclick="fixHeader()">Arreglar Título</button>
+    <p>JavaScript puede cmabiar los atributos de los elementos . 
+
+    </p>
+    <img id="myImg" src="https://images.unsplash.com/photo-1593288942460-e321b92a6cde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="400px">
+    <button onclick="changeImg()">Cambiar imagen</button>
 </body>
 <script>
+    //Esta línea de código se ejecuta inmeditamente cuando el navegador la lee
+    // ya que no tiene ningún tipo de contexto
     document.getElementById('txt').innerHTML = "Hola Mundo!"
+    // Una función es un bloque de código reutilizable que se ejecuta
+    //mediante una acción dada
+function changeTxt(){
+    //Con "document" accedemos a una serie de funciones del documento
+    // "getElementById" encuentra el elemento que dicha id
+    // innmerHTML se refiere a la propiedad del elemento  para acceder al contenido
+    // que está entre las etiquetas
+    document.getElementById('txt').innerHTML = "He cambiado el texto uasando JavaScript"
+
+
+
+
+}
+//Lo primero es buscar el Header y actuar sobre el
+function fixHeader(){
+document.getElementById('myHeader');
+//Corregir el color del fondo usando la propiedad style.
+document.getElementById('myHeader').style.backgroundColor = "#255585";
+//Quitar el borde:
+document.getElementById('myHeader').style.borderRadius = "80%";
+
+//Centrar el texto:
+document.getElementById('myHeader').style.textAlign = "center";
+//Cambiar color de la letra
+document.getElementById('myHeader').style.color ="white";
+//Agrandar la letra
+
+document.getElementById('myHeader').style.style.fontSize = "40px"
+}
+function changeImg(){
+    document.getElementById('myImg').src = 'https://static6.depositphotos.com/1030334/671/i/600/depositphotos_6716219-stock-photo-kitten.jpg'
+}
 </script>
 </html>

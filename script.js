@@ -1,4 +1,4 @@
-function test() {
+function calcularPropina() {
     // Tomamos los datos que ha introducido el usuario
     var cuenta = document.getElementById('cuentaTotal').value;
     var servicio = document.getElementById('calidadServ').value;
@@ -10,7 +10,7 @@ function test() {
     // Accedo al elemento donde quiero imprimir el resultado
     var parrafo = document.getElementById('pResultado');
     // Lo muestro porque está oculto por defecto
-    parrafo.style.display = 'block';
+    parrafo.style.visibility = 'visible';
     // Y lo relleno con el texto que quiero mostrar
     parrafo.innerHTML = resultado + "€ por persona";
 

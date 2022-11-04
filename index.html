@@ -18,8 +18,8 @@
             <p>
                 Gasto total de la cuenta:
             </p>
-            <p>
-                <input name="inputCuenta" id="cuentaTotal" type="number"> €
+            <p class="tope">
+                <input name="inputCuenta" id="cuentaTotal" type="number" min="0" oninput="validity.valid||(value='')"> €
             </p>
         </div>
 
@@ -42,7 +42,7 @@
                 Número de comensales:
             </p>
             <p>
-                <input id="numPersonas" type="number"> personas.
+                <input id="numPersonas" type="number" min="0"> personas.
             </p>
             
         </div>

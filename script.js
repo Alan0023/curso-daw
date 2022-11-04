@@ -9,14 +9,20 @@ function calcularPropina() {
 
     // Accedo al elemento donde quiero imprimir el resultado
     var parrafo = document.getElementById('pResultado');
-    // Lo muestro porque está oculto por defecto
+    resultado = resultado.toFixed(2);
+   
+    if(resultado > 0){
+         // Lo muestro porque está oculto por defecto
     parrafo.style.visibility = 'visible';
     // Y lo relleno con el texto que quiero mostrar
     parrafo.innerHTML = resultado + "€ por persona";
 
+    }
     // Imprimimos los datos en la consola
     console.log(cuenta + " €");
+   
 }
+
 
 // Para obtener la propina hay que multiplicar el gasto por la calidad del servicio para obtener el correspondiente porcentaje y, por tanto, la propina total
 

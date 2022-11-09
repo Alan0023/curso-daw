@@ -1,0 +1,10 @@
+#palabra{
+    font-size: 60px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    
+}
+#lienzo{
+    border: 2px solid black;
+    height: 300px;
+}

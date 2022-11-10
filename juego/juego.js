@@ -43,13 +43,13 @@ for (let indice = 0; indice < longitud; indice++) {
 
     //Guardo un guion en la variable por cada letra que tiene nuestra palabra
     texto += "_";
-   
+
 
 
 }
 
 // Se imprimen los guiones, ocultando la palabra de juego
-displayPalabra.innerHTML = palabra;
+displayPalabra.innerHTML = texto;
 
 //Botones
 //Vamos a asignar el evento click a cada botón desde JS
@@ -72,10 +72,36 @@ const botones = document.getElementById('tablero').childNodes;
 //Por ejemplo, al hacer click sobre un boton o cuando pasemos el cursor por encima
 
 for (let i = 0; i < botones.length; i++) {
-    botones[i].addEventListener("click", test)
+    botones[i].addEventListener("click", juego)
 }
+//Declaramos un array en el que iremos guardando los aciertos
+let aciertos = [];
+//Contador aciertos
+let contador = 0;
+//Digamos que tenemos la palabra "perro" y pulsamos la o 
+//Queremos guardar aquellas letras que hemos acertado
+let ejemplo = [
+    "_", //p
+    "_", //e
+    "_", //r
+    "_", //r
+    "o"
 
-function test(){
+
+]
+//Entonces, seguidamente mostramos al usuario el contenido den pantalla que podemos 
+//imprimir en pantalla  "_ _ _ _ o"
+
+//si luego usamos la "r" el resultado quedaria
+ejemplo = [
+    "_", //p
+    "_", //e
+    "r",
+    "r",
+    "o",
+]// Y si imprimimos los cambios el resulatado en la pantalla sería"_ _ r r o"
+
+function juego() {
     console.log("Has pulsado un boton")
 
     //Tomamos el contexto del botón con this
@@ -84,7 +110,7 @@ function test(){
     //Transformo la letra en minúscula
     letra = letra.toLowerCase();
 
-    let texto = "";
+
 
     //Recorremos la palabra caracter a caracter, en busca de coincidencias.
     // con la letra pulsada
@@ -92,28 +118,77 @@ function test(){
         console.log(palabra[i])
 
         //Comprobamos si la letra de la palabra coincide con la letra del btn
-        if(palabra[i]== letra){
+        if (palabra[i] == letra) {
             console.log("Hay una coincidencia")
-            texto += letra;
+            //Guardamos la letra acertada en el array de aciertos en la misma posicion que tiene la palabra
+            aciertos[i] = letra;
+            //Cada vez que hay un acierto, el contador aumenta
+            contador++;
 
-            
-        
+
+
+
         }
-        else{
+        else if (!aciertos[i]) {
             //Si entra en el else, es que no han habido coincidencias
-         texto += "_";
+            //La condicion if()solo se cumple cuando la posición array aun no tiene ningún valor
+            aciertos[i] = "_";
         }
+        console.log(texto);
+        console.log(aciertos);
 
 
     }
 
+    //Creamos el string para imprimir en pantalla y le quitamos las comas del array
+    //Sin el join la palabra "conejo" se vería "i,o,n,e,j,o"
+    texto = aciertos.join("")
     displayPalabra.innerHTML = texto;
 
     console.log(letra);
-    
 
 
-   
+    //Al final comprobamos si hemos ganado
+    ganar();
+
+
+
+
+}
+//Creamos una función donde comprobemos si hemos ganado una partida y en ese caso,
+//mostrar un anuncio
+function ganar() {
+    //Comprobar que el numero de aciertos es igual a la longitud de la palabra
+    if (contador == palabra.length) {
+        //mensaje de has ganado
+
+        setTimeout(function () {
+            // window.alert('has ganado')
+            // location.reload();
+
+        }, 1000)
+
+    }
+
+    //Comprobamos que ya no hay guiones vacios
+    //Contador guiones
+    let guiones = 0;
+
+    //Recorremos el array de aciertos en busca de guiones
+    for (let i = 0; i < aciertos.length; i++) {
+        if (aciertos[i] == "_") {
+            guiones++;
+        }
+    }
+
+    //Si hemos contado los guiones y no hay, es porque la palabra esta completa y, por tanto, hemos ganado
+    if (guiones == 0) {
+        setTimeout(function () {
+            window.alert('has ganado')
+            location.reload();
+        }, 1000)
+    }
+
 }
 
 

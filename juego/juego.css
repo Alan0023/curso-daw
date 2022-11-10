@@ -8,3 +8,19 @@
     border: 2px solid black;
     height: 300px;
 }
+#tablero{
+    padding: 0px;
+    border: double;
+   
+}
+h1{
+    text-align: center;
+    
+}
+h2{
+    text-align: center;
+    border: so;
+}
+#fallos{
+    text-align: center;
+}

@@ -1,3 +1,4 @@
+
 const palabras = [
     "perro",
     "conejo",
@@ -78,6 +79,8 @@ for (let i = 0; i < botones.length; i++) {
 let aciertos = [];
 //Contador aciertos
 let contador = 0;
+//Vidas del usuario, si se agotan pierde la partida
+let vidas= 7;
 //Digamos que tenemos la palabra "perro" y pulsamos la o 
 //Queremos guardar aquellas letras que hemos acertado
 let ejemplo = [
@@ -111,6 +114,9 @@ function juego() {
     letra = letra.toLowerCase();
 
 
+    let exitos = 0;
+
+
 
     //Recorremos la palabra caracter a caracter, en busca de coincidencias.
     // con la letra pulsada
@@ -124,8 +130,8 @@ function juego() {
             aciertos[i] = letra;
             //Cada vez que hay un acierto, el contador aumenta
             contador++;
-
-
+            //Contamos los exitos cada vez que pulsamos un boton
+            exitos++;
 
 
         }
@@ -139,6 +145,14 @@ function juego() {
 
 
     }
+     // Si no hay éxitos al pulsar el botón me resto una vida
+     if (exitos == 0) {
+        vidas--;
+        this.style.backgroundColor = 'red';
+    } else {
+        this.style.backgroundColor = 'green';
+    }
+    
 
     //Creamos el string para imprimir en pantalla y le quitamos las comas del array
     //Sin el join la palabra "conejo" se vería "i,o,n,e,j,o"

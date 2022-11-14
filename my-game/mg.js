@@ -72,7 +72,16 @@ function juego() {
         else if(!coincidencias[i]){
             coincidencias[i]="_";
         }
+        console.log(texto);
+        console.log(aciertos);
+
         
+    }
+    if (exitos == 0) {
+        vidas--;
+        this.style.backgroundColor = 'red';
+    } else {
+        this.style.backgroundColor = 'green';
     }
     
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="../clases/general.css">
+    <style>
+        .container{
+            color: white;
+            background: gray;
+            text-align: center;
+            user-select: none;
+        }
+        .container div {
+            padding: 10px;
+            border: 1px solid white;
+            
+        }
+        .container div:first-child{
+            cursor: pointer;
+        }
+        #block{
+            display: none;
+        }
+        .borde{
+            border: 2px solid rgb(30, 56, 206);
+        }
+    </style>
+</head>
+<body>
+    <h1>"Layout" en CSS</h1>
+    <p>
+        El layout es la disposicion o la forma en la que los elementos se muestran en la pantalla según su tipo.
+    </p>
+    <h2>Display</h2>
+    <p>
+        Es la propiedad más importante de CSS para controlar el alineamiento.
+    </p>
+    <p>
+       La propiedad <code>display</code>especifica la forma en la que se muestra un elemento.
+    </p>
+    <p>
+        En HTML cada elemento posee un valor por defecto dependiendo del tipo
+        de elemento que sea. La mayoría de los elementos poseen una propiedad
+        <code>block</code>o <code>inline</code> por defecto.
+    </p>
+    <div class="container">
+        <div onclick="showPanel()">Haz click para mostrar el panel</div>
+     <div id="block"> 
+        <p>Este panel contiene un elemento <code>div</code>, oculto por defecto
+        con <code>diplay: none;</code>
+        </p>
+        <p>
+        Esta estilizado con CSS y usamos JavaScript para mostrarlo.
+        Cambiando a <code>disaplay: block;</code>
+         </p>
+     </div>
+    </div>
+    <h2>Elementos de bloque</h2>
+    <p>
+        Los elementos de bloque siempre empiezan en una nueva línea y toman todo el 
+        ancho disponible.
+    </p>
+    <div class="borde">
+        Este elemento <code>div</code> es de tipo bloque.
+    </div>
+</body>
+<script>
+    function showPanel() {
+        const panel = document.getElementById('block')
+        panel.style.display = 'block';
+    }
+</script>
+</html>

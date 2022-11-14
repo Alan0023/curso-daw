@@ -9,7 +9,7 @@
     <style>
         .container{
             color: white;
-            background: gray;
+            background: rgb(63, 35, 189);
             text-align: center;
             user-select: none;
         }
@@ -26,6 +26,36 @@
         }
         .borde{
             border: 2px solid rgb(30, 56, 206);
+        }
+        .bloque{
+            display: block;
+        }
+        .linea{
+            display: inline;
+        }
+        /*Display y visibility*/
+        .flex-container{
+            display: flex;
+            justify-content: center;
+        }
+        .flex-container>div{
+            border: 2px solid rgb(42, 42, 155);
+            width: 100%;
+            padding: 10px;
+        }
+        .img{
+            height: 150px;
+            background-image: url(https://th.bing.com/th/id/OIP.pYZ_We-E2jyb0sVUL-oNQgHaEK?pid=ImgDet&rs=1);
+            background-position: center;
+            background-size: cover;
+        }
+        .flex-container button{
+            background: rgb(32, 32, 151);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -66,11 +96,99 @@
     <div class="borde">
         Este elemento <code>div</code> es de tipo bloque.
     </div>
+    <p>Algunos elementos de bloque:</p>
+    <ul>
+        <li>div</li>
+        <li>h1 - h6</li>
+        <li>p</li>
+        <li>form</li>
+        <li>header</li>
+        <li>section</li>
+        <li>footer</li>
+    </ul>
+    <h2>Elementos en línea(Inline)</h2>
+    <p>Estos elementos no empiezan en una nueva línea y ocupan sólo el ancho 
+        necesario.
+    </p>
+    <p>
+        Esto es <span class="borde">un span dentro</span> un párrafo
+    </p>
+    <p>
+        Algunos de estos elementos:
+    </p>
+    <ul>
+        <li>span</li>
+        <li>a</li>
+        <li>img</li>
+    </ul>
+    <h2>Alterar el valor de <code>display</code> por defecto</h2>
+    <p>
+        Es posible alterar el valor de display de los elementos, para cambiar
+        la forma en la que éstos se muestran en pantalla.
+    </p>
+    <p>
+        Ejemplo de una lista horizontal para recrear un menú horizontal
+    </p>
+    <ul>
+        <li class="linea borde">HOME</li>
+        <li class="linea borde">Contact US</li>
+        <li class="linea borde">Services</li>
+    </ul>
+    <p>
+        Ejemplo de mostrar varios span como bloques
+    </p>
+    <span class="bloque borde">Esta es una serie</span><span class="bloque borde">de elementos 
+        span</span><span class="bloque borde">puestos en bloque.</span>
+    
+    <h2>
+        Diferencias entre <code>display none;</code> y <code>cisibility: hidden;</code>
+    </h2>
+    <p>
+        Al ocultar un elemento con <code>display: none;</code> la página se
+        mostrará como si el elemento no estuviera ahí.
+    </p>
+    <p>
+        Al ocultar un elemento con <code>visibility: hidden</code> el elemento
+        no se mostrará pero el espacio que ocupa se quedará en blanco.
+    </p>
+    <div class="flex-container">
+        <div>
+            <p><code>display: none;</code></p>
+            <div class="img" id="quitar"></div>
+            <button onclick="quitar()">Quitar</button>
+        </div>
+        <div>
+            <p><code>visibility: hidden;</code></p>
+            <div class="img" id="esconder"></div>
+            <button onclick="esconder()">Esconder</button>
+        </div>
+        <div>
+            <p>Reset</p>
+            <div class="img"></div>
+            <button onclick="restablecer()">Restablecer</button>
+        </div>
+
+    </div>
+
 </body>
 <script>
     function showPanel() {
         const panel = document.getElementById('block')
         panel.style.display = 'block';
+    }
+    //Quitar y esconder
+    const quitarFoto = document.getElementById('quitar');
+    const esconderFoto = document.getElementById('esconder');
+
+    function quitar(){
+        quitarFoto.style.display = 'none';
+    }
+    function esconder(){
+        esconderFoto.style.visibility ='hidden';
+    }
+    function restablecer(){
+        quitarFoto.style.display = 'block';
+        esconderFoto.style.visibility ='visible';
     }
 </script>
 </html>

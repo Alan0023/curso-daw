@@ -1,0 +1,31 @@
+body{
+    font-family: 'Roboto Mono',monospace;
+    background-color: #3d8157;
+    background-size: cover;
+    background-position: center top;
+    
+}
+.container{
+    
+    padding: 20px;
+    height: 100vh;
+   
+}
+.tablero{
+  display: flex;
+ 
+}
+.numeros{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    
+}
+.operaciones{
+    flex-wrap: wrap;
+
+}
+.resultados{
+    display: flex;
+    flex-direction: column;
+}

@@ -158,6 +158,51 @@
        .left{
         left: 0;
        }
+       /*z index*/
+       .z-container{
+        color: white;
+        position: relative;
+
+        margin-bottom: 400px;
+        border: 1px solid purple;
+       }
+       .z-container p{
+        background: black;
+       }
+       .z-container img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -5;
+      
+       }
+       .blackbox{
+        border: 2px solid black;
+        height: 100px;
+        background: black;
+        color: white;
+
+        position: absolute;
+        z-index: 1;
+        margin:  30px;
+        right: 190px;
+       }
+       .greenbox{
+        background: lightgreen;
+        height: 100px;
+        z-index: 2;
+        position: absolute;
+        top: px;
+        right: 30px;
+       }
+       .graybox{
+        background: lightgray;
+        height: 100px;
+        z-index: 3;
+        position: absolute;
+        top: 90px;
+        right: 200px;
+       }
     </style>
 </head>
 <body>
@@ -405,6 +450,55 @@
         <p class="botton left">Botton Left</p>
         <p class="botton right">Botton Right</p>
     </div>
+
+
+    <hr>
+
+    <h2>El posicionamiento vertical con <code>z-index</code></h2>
+    <p>
+        El <code>z-index</code> determina el orden en el que se posicionan 
+        los elementos.
+    </p>
+    <p>
+        Cuando se posicionan, puede que se monten sobre otros. 
+    </p>
+    <p>
+        Esta propiedad determina en que orden se amontonan los elementos. Es decir,
+        que elementos van por encima o por debajo de otros.
+    </p>
+    <div class="z-container">
+        <h1>Esto es un título</h1>
+        <p>
+            He aquí una img con z-index de -1
+        </p>
+        <p>
+            <b>Nota:</b><code>z-index</code> solo funciona en elementos posicionados
+            o en elementos flexibles(son aquellos descendientes de contenedores 
+            con <code>display: flex;</code> )
+        </p>
+        <img src="https://www.cultture.com/pics/2022/11/god-of-war-ragnarok-recibe-notas-de-parche-para-la-actualizacion-del-dia-de-lanzamiento.jpg" alt="" width="100%">
+    </div>
+
+    
+    <h3>Otro ejemplo de <code>z-index</code></h3>
+    <div class="z-container">
+        <div class="blackbox">
+            <p>
+                Caja negra con un <code>z-index</code> de 1.
+            </p>
+        </div>
+        <div class="greenbox">
+            <p>
+                Caja verde con un <code>z-index</code> de 2.
+            </p>
+        </div>
+        <div class="graybox">
+            <p>
+                Caja gris con un <code>z-index</code> de 3.
+            </p>
+        </div>
+    </div>
+    
     <pre>
 
 

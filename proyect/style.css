@@ -1,0 +1,47 @@
+
+body{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background: linear-gradient(90deg, rgb(3, 29, 101), black);
+}
+.container{
+
+ width: 400px;
+ background: #303030;
+ border: 1px solid white;
+ display: grid;
+ border-radius: 15px;
+ grid-template-columns: auto auto auto;
+ gap:  20px;
+padding: 20px;
+}
+.container .buttons{
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 white;
+}
+.container .buttons:active{
+    box-shadow: 0 3px o white;
+    transform: translateY(3px);
+}
+.container .buttons:nth-child(1){
+    background: cornflowerblue;
+}
+.container .buttons:nth-child(2){
+    background: greenyellow;
+}
+.container .buttons:nth-child(3){
+    background: yellow;
+}
+.container .buttons:nth-child(4){
+    background: red;
+}
+.container .buttons:nth-child(5){
+    background: lightblue;
+}
+.container .buttons:nth-child(6){
+    background: purple;
+}

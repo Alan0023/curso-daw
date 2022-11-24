@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a JavaScript</title>
+    <link rel="stylesheet" href="../clases/general.css">
+   
+
+    <!-- css con estilos animados para los botones -->
+    <link rel="stylesheet" href="magic.html">
+    <style>
+        /* #bulbOn {
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Introducción a JavaScript</h1>
+    <p>
+        JavaScript es el lenguaje de programación de la web. Nos permite crear interacciones usuario-web.
+    </p>
+    <p>Ejemplos:</p>
+    <!-- Camel Cased: Las variables o definiciones se nombrarán SIEMPRE empezando por minúscula, sin usar espacios ni símbolos y separando las palabras mediante el uso de mayúsculas (la primera letra de cada palabra a partir de las segunda) "pedroPicapiedra" "ejemploSencilloDeNombreDeVariable" -->
+    <p id="pColor">
+        Pulsa el botón de abajo para resaltar este párrafo.
+    </p>
+    <!-- onclick indica que cuando se pulse el botón se ejecutará el código que se indica. En este caso, la función -->
+    <button onclick="colorChange()">Color</button>
+    <hr>
+    <p id="pDate">
+        Pulsa el botón inferior para mostrar la fecha y hora actuales.
+    </p>
+    <button onclick="showDate()">Mostrar fecha</button>
+    <hr>
+    <p id="pHide">
+        Pulsa el botón inferior para ocultar/mostrar este párrafo.
+    </p>
+    <button onclick="hideShow()">Mostrar/Ocultar</button>
+    <hr>
+    <p>
+        Pulsa el botón para encender la bombilla
+    </p>
+    <img id="bulb" src="../recursos/bombilla-apagada.gif" alt="">
+    <!-- <img id="bulbOn" src="../recursos/bombilla-encendida.gif" alt=""> -->
+    <br>
+    <!-- <button onclick="encender()">Encender la luz</button>
+    <button onclick="apagar()">Apagar la luz</button> -->
+    <button onclick="lightSwitch()">Interruptor de la luz</button>
+</body>
+<script src="script.js"></script>
+</html>
